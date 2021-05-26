@@ -43,3 +43,11 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
+
+# including fontawesome and simple form
+gem 'autoprefixer-rails'
+gem 'font-awesome-sass', '~> 5.6.1'
+gem 'simple_form'
+
+#includes Faker Gem to generate new restaurants for the seed db
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
