@@ -1,0 +1,20 @@
+
+<div class="card mt-4">
+  <div class="card-body">
+    <h1 class="h1"> <%= @restaurant.name %> </h1>
+    <p> Cuisine: <%= @restaurant.category %> </p>
+    <p> Address: <%= @restaurant.address %> </p>
+    <p> Telephone: <%= @restaurant.phone_number %> </p>
+  </div>
+</div>
+
+<%= link_to "Back to all Restaurants", restaurants_path, class:"btn btn-primary text-light mt-3" %>
+
+<%= link_to "Write a review", new_restaurant_review_path(@restaurant), class:"btn btn-primary text-light mt-3" %>
+
+
+<% @restaurant.reviews.each do |review|  %>
+  <p class="mt-4 mb-2 blockquote-footer">
+    " <%= review.content %> "
+  </p>
+<% end %>
